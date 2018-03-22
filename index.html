@@ -3,14 +3,13 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Crystals Collector</title>
+    <title>Booze Collector</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="assets/CSS/reset.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="assets/CSS/style.css" />
-
+    <!-- Scripts for jQuery + Javascript path -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-    <!-- <script src="game.js"></script> -->
+    <script src="assets/javascript/game.js"></script>
 </head>
 <body>
     <h1>Booze Collector</h1>
@@ -22,7 +21,7 @@
         
         <div id="win-loss">
             <p id="wins">Just Enough! WIN: </p>
-            <p id="losses">Call an Ambulance! LOSS: </p>
+            <p id="losses">Too Much! Call an Ambulance! LOSS: </p>
         </div>
         <div id="button-grid">
             <img src="assets/images/campari.jpeg" id="red-button">
@@ -36,97 +35,5 @@
 
   <!-- Header with an id of click-me -->
 
-  <script type="text/javascript">
-
-    // This "document.ready" code isn't necessary in this example... but is useful to become familiar with.
-      // "document.ready" makes sure that our JavaScript doesn't get run until the HTML document is finished loading.
-      $(document).ready(function () {
-
-      // VARIABLES
-      // ====================================================================
-      // Here we create variables for tracking different aspects of the game: 
-            
-      var totalScore = 0; 
-      var wins = 0; 
-      var losses = 0; 
-      var random; 
-     
-     StartGame(); 
-
-
-        // Here we use jQuery to create a click event with the buttons using the correspondent image
-        // And so whenever it is clicked...
-
-        $("body").on("click", "#red-button", function() {
-            console.log("this is the redButton value" , redButton);
-            totalScore = totalScore+redButton;  // adds the button total to the total player score
-            evaluateGuess(); //runs the function to evaluate the equation: is my number < than computer
-            $("#total-score").text(totalScore); 
-        });
-
-        $("body").on("click", "#blue-button", function () {
-            console.log("this is the Blue Button value" , blueButton);
-            totalScore = totalScore+blueButton; 
-            evaluateGuess(); 
-            $("#total-score").text(totalScore); 
-
-        });
-
-        $("body").on("click", "#yellow-button", function () {
-            console.log("this is the Yellow Button value" , yellowButton);
-            totalScore = totalScore+yellowButton; 
-            evaluateGuess(); 
-            $("#total-score").text(totalScore); 
-
-        });
-
-        $("body").on("click", "#green-button", function () {
-            console.log(greenButton);
-            totalScore = totalScore+greenButton; 
-            evaluateGuess(); 
-            $("#total-score").text(totalScore); 
-        });
-        
-         // Function to Start the Game
-        // ... we generate the random numbers at the beginning of every game!
-
-        function StartGame() {
-   
-         random = Math.floor(Math.random() * 100 + 1);
-         redButton = Math.floor(Math.random() * 10 + 1);
-         blueButton = Math.floor(Math.random() * 10 + 1);
-         yellowButton = Math.floor(Math.random() * 10 + 1);
-         greenButton = Math.floor(Math.random() * 10 + 1);
-   
-         $("#random-number").text(random); // sets the random number on the page
-         $("#red-button").text(redButton); 
-
-        }
-        // Function to Evaluate the Guess
-
-        function evaluateGuess(){
-            if (totalScore<random) {
-                console.log("the random value", random);                 
-            }
-
-            else if (totalScore === random){
-                console.log("You WIN!", totalScore, random)
-                wins++; 
-                $("#wins").text("Had Just Enough! "+ wins)
-                totalScore = 0; 
-                StartGame(); 
-            }
-
-            else{
-                console.log("Start Over", totalScore)
-                losses++; 
-                $("#losses").text("Losses: " +losses)
-                totalScore = 0; 
-                StartGame(); 
-            }
-        }
-    });
-
-</script>
 
 </html>
