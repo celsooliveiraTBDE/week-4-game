@@ -1,0 +1,61 @@
+
+body {
+    background-color: lightblue;
+    background-image: url('https://thumb9.shutterstock.com/display_pic_with_logo/3842153/525947338/stock-photo-empty-of-wood-counter-bar-with-blur-cafe-restaurant-in-dark-background-selective-focus-for-montage-525947338.jpg');
+    background-size: cover; 
+}
+#button-grid {
+    display: block;
+    height: 200px; 
+    margin: 20px; 
+    border: 40px; 
+     
+}
+img {
+    cursor:pointer; 
+    border: none;
+    width: 15%;
+    height: auto;  
+}
+p{
+    color: #ffffff; 
+    font-size: 24px; 
+    border: 25px; 
+    margin: 25px; 
+    margin-left: 0px; 
+}
+#random-number, #total-score {
+    color: #ffffff; 
+    font-size: 24px; 
+    
+}
+
+#losses{
+    margin-bottom: 100px; 
+    border-bottom: 100px; 
+}
+
+/* #blue-button {
+    cursor:pointer; 
+    width: 100px;
+    height: auto;
+    border: none;
+    display: inline; 
+    
+}
+#red-button {
+    cursor:pointer; 
+    width: 100px;
+    height: auto;
+    border: none;
+    display: inline; 
+    
+}
+#red-button {
+    cursor:pointer; 
+    width: 100px;
+    height: auto;
+    border: none;
+    display: inline; 
+    
+} */

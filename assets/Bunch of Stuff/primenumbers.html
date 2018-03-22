@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    // var number = 0; 
+    // for (let i = 0; i <= 100; i++) {
+    //     if(i % 3 === 0 ){
+    //         console.log("Fizz")
+    //     }
+    //     else if (i % 5 === 0){
+
+    //      number = [i];
+    //      console.log(i, "Buzz")
+    //     }
+
+    //     else if (i % 15 === 0){
+    //         console.log("FizzBuzz", i)
+    //     }
+    //     else{
+    //         console.log("This is the ", i)
+    //     }
+    // }
+
+
+// Ask for Input the number from client or generate random
+var someNumber = 10; 
+var counter = 0; 
+// A prime number is only divisible by itself and 1. A for loop can be run to check the number. If the number is divisible by a third number up to the number itself
+// then return false, else return 
+
+function primeChecker(){
+
+console.log(someNumber)
+for (let i = 0; i < someNumber; i++) {
+    if (someNumber % i === 0){
+        counter++; 
+    
+        }
+    if (counter>2){
+    return false; 
+    }
+    else{
+        return true; 
+    }
+
+    }
+    
+}
+primeChecker(); 
+// if statement to check if the number is divisible by 1
+
+// if statement to check if the number is divisible by itself 
+
+
+
+
+
+</script>
+Prime Checker:
+
+Write a function that checks to see if a number is a prime number or not. Have it return true if it is, or false if it's not.
+
+More Info:
+
+More info on Prime numbers: https://www.mathsisfun.com/prime_numbers.html
